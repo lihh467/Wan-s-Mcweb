@@ -19,17 +19,31 @@ import { websiteConfig } from '../config/website.config.js';
         <!-- 导航菜单 -->
         <div class="navbar-menu">
             <ul class="nav-links">
-                {websiteConfig.navigation.items.filter(item => item.enabled).map(item => (
-                    <li class="nav-item">
-                        <a 
-                            href={item.path} 
-                            class={`nav-link ${Astro.url.pathname === item.path ? 'active' : ''}`}
-                        >
-                            <i class={`mdi ${item.icon}`}></i>
-                            <span>{item.name}</span>
-                        </a>
-                    </li>
-                ))}
+                {websiteConfig.navigation.items.filter(item => item.enabled).map(item => {
+                    // 判断是否为外链
+                    const isExternal = item.external === true && item.externalUrl;
+                    const href = isExternal ? item.externalUrl : item.path;
+                    const target = isExternal ? '_blank' : '_self';
+                    const rel = isExternal ? 'noopener noreferrer' : '';
+                    
+                    // 判断是否为当前页面（仅对内链有效）
+                    const isActive = !isExternal && Astro.url.pathname === item.path;
+                    
+                    return (
+                        <li class="nav-item">
+                            <a 
+                                href={href}
+                                target={target}
+                                rel={rel}
+                                class={`nav-link ${isActive ? 'active' : ''} ${isExternal ? 'external-link' : ''}`}
+                            >
+                                <i class={`mdi ${item.icon}`}></i>
+                                <span>{item.name}</span>
+                                {isExternal && <i class="mdi mdi-open-in-new external-icon"></i>}
+                            </a>
+                        </li>
+                    );
+                })}
             </ul>
         </div>
         

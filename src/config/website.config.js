@@ -17,6 +17,9 @@ export const websiteConfig = {
         path: "/",
         icon: "mdi-home",
         enabled: true,
+        // 外链配置：如果external为true，则点击跳转到externalUrl
+        external: false, // 是否启用外链模式
+        externalUrl: "", // 外链地址（仅在external为true时生效） //请填写完整的URL，例如：https://mc.wanfory.top,必须带协议头
         // 页面标题配置
         pageTitle: {
           // 主标题配置（支持打字机效果）
@@ -38,6 +41,9 @@ export const websiteConfig = {
         path: "/gallery",
         icon: "mdi-image",
         enabled: true,
+        // 外链配置：如果external为true，则点击跳转到externalUrl
+        external: false, // 是否启用外链模式
+        externalUrl: "", // 外链地址（仅在external为true时生效）
         pageTitle: {
           mainTitle: {
             texts: ["游戏相册", "DCS Game Gallery"],
@@ -56,6 +62,9 @@ export const websiteConfig = {
         path: "/history",
         icon: "mdi-history",
         enabled: true,
+        // 外链配置：如果external为true，则点击跳转到externalUrl
+        external: false, // 是否启用外链模式
+        externalUrl: "", // 外链地址（仅在external为true时生效）
         pageTitle: {
           mainTitle: {
             texts: ["晚晚服服历程", "DCS History"],
@@ -74,6 +83,9 @@ export const websiteConfig = {
         path: "/leaderboard",
         icon: "mdi-trophy",
         enabled: true,
+        // 外链配置：如果external为true，则点击跳转到externalUrl
+        external: false, // 是否启用外链模式
+        externalUrl: "", // 外链地址（仅在external为true时生效）
         pageTitle: {
           mainTitle: {
             texts: ["玩家排行榜", "DCS Leaderboard"],
@@ -92,6 +104,9 @@ export const websiteConfig = {
         path: "/about",
         icon: "mdi-information",
         enabled: true,
+        // 外链配置：如果external为true，则点击跳转到externalUrl
+        external: false, // 是否启用外链模式
+        externalUrl: "", // 外链地址（仅在external为true时生效）
         pageTitle: {
           mainTitle: {
             texts: ["关于服务器", "About DCServer"],
