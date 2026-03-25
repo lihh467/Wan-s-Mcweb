@@ -396,7 +396,7 @@ export const websiteConfig = {
           icon: "qqchat",
           buttonText: "加入 QQ 群",
           buttonType: "secondary",
-          url: "https://qm.qq.com/q/tXymKq8Oo8"
+          url: "https://qm.qq.com/q/igriSCc6ze"
         },
         {
           title: "邮箱",
