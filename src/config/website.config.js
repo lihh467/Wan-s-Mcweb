@@ -2,10 +2,10 @@
 export const websiteConfig = {
   // 网站基本信息
   site: {
-    title: "WMX服",
-    description: "欢迎来到WMX服，探索无限可能的方块世界！",
-    keywords: "Minecraft,服务器,基岩版,生存,生电",
-    author: "WMX服",
+    title: "Technology多玩法服务器",
+    description: "欢迎来到Technology，在这里你可以体验许多玩法！",
+    keywords: "Minecraft,服务器,我的世界,Java版,生存,创造,生电，多玩法",
+    author: "Technology多玩法服务器",
     language: "zh-CN"
   },
 
@@ -24,7 +24,7 @@ export const websiteConfig = {
         pageTitle: {
           // 主标题配置（支持打字机效果）
           mainTitle: {
-            texts: ["欢迎来到 WMX服", "Fantasie Welt."], // 多语言标题数组
+            texts: ["欢迎来到 Technology多玩法服务器", "Welcome to Technologyserver"], // 多语言标题数组
             typewriter: {
               enabled: true, // 是否启用打字机效果
               speed: 100,    // 打字速度（毫秒）
@@ -33,7 +33,7 @@ export const websiteConfig = {
             }
           },
           // 副标题配置
-          subtitle: "探索无限可能的方块世界，与朋友一起创造属于你们的冒险故事"
+          subtitle: "你的游戏体验，不该被单一玩法束缚"
         }
       },
       {
@@ -46,7 +46,7 @@ export const websiteConfig = {
         externalUrl: "", // 外链地址（仅在external为true时生效）
         pageTitle: {
           mainTitle: {
-            texts: ["游戏相册", "WMX Game Gallery"],
+            texts: ["游戏相册", "DCS Game Gallery"],
             typewriter: {
               enabled: true,
               speed: 100,
@@ -67,7 +67,7 @@ export const websiteConfig = {
         externalUrl: "", // 外链地址（仅在external为true时生效）
         pageTitle: {
           mainTitle: {
-            texts: ["WMX服服历程", "WMX History"],
+            texts: ["晚晚服服历程", "DCS History"],
             typewriter: {
               enabled: true,
               speed: 100,
@@ -79,16 +79,16 @@ export const websiteConfig = {
         }
       },
       {
-        name: "服务器网站",
+        name: "排行榜",
         path: "/leaderboard",
         icon: "mdi-trophy",
         enabled: true,
         // 外链配置：如果external为true，则点击跳转到externalUrl
-        external: true, // 是否启用外链模式
-        externalUrl: "http://mc.wumingx.top:31234/", // 外链地址（仅在external为true时生效）
+        external: false, // 是否启用外链模式
+        externalUrl: "", // 外链地址（仅在external为true时生效）
         pageTitle: {
           mainTitle: {
-            texts: ["玩家排行榜", "WMX Leaderboard"],
+            texts: ["玩家排行榜", "DCS Leaderboard"],
             typewriter: {
               enabled: true,
               speed: 100,
@@ -109,7 +109,7 @@ export const websiteConfig = {
         externalUrl: "", // 外链地址（仅在external为true时生效）
         pageTitle: {
           mainTitle: {
-            texts: ["关于服务器", "About WMXServer"],
+            texts: ["关于服务器", "About DCServer"],
             typewriter: {
               enabled: true,
               speed: 100,
@@ -130,12 +130,13 @@ export const websiteConfig = {
   // 背景图片配置
   background: {
     images: [
-      "/backgrounds/desktopWallpaper_1.jpeg",
-      "/backgrounds/desktopWallpaper_2.jpeg",
-      "/backgrounds/desktopWallpaper_3.jpeg",
-      "/backgrounds/desktopWallpaper_4.jpeg",
-
-"/backgrounds/desktopWallpaper_5.jpeg",
+      "/backgrounds/desktopWallpaper_1.webp",
+      "/backgrounds/desktopWallpaper_2.webp",
+      "/backgrounds/desktopWallpaper_3.webp",
+      "/backgrounds/desktopWallpaper_4.webp",
+      "/backgrounds/desktopWallpaper_5.webp",
+      "/backgrounds/desktopWallpaper_6.webp",
+      "/backgrounds/desktopWallpaper_7.webp",
     ],
     defaultImage: "/backgrounds/default.webp"
   },
@@ -146,7 +147,7 @@ export const websiteConfig = {
     metingApi: "https://api.injahow.cn/meting/",
     server: "netease", // netease, kugou
     type: "playlist",   // playlist, song
-    id: "5186526688",      // 歌单ID
+    id: "6886146265",      // 歌单ID
     autoPlay: false,
     volume: 0.8
   },
@@ -198,17 +199,18 @@ export const websiteConfig = {
     // 页面显示的服务器地址
     displayAddress: "frp-hip.com:23047",
     // API请求使用的服务器地址（可以不同）
-    apiAddress: "123.184.216.106",
+    apiAddress: "frp-hip.com",
     port: "23047",
     version: "1.21.11",
-    apiEndpoint: "https://api.mcstatus.io/v2/status/java",
+    apiEndpoint: "https://api.mcstatus.io/v2/status/java/<address>frp-hip.com:23047",
   },
 
   // 页脚配置
   footer: {
-    copyright: "© 2022-2026 WMX服保留所有权利.",
+    copyright: "© 2022-2026 晚晚服保留所有权利.",
     customHtml: `
       <!-- 在这里插入自定义HTML代码，比如备案信息 -->
+      <div style='display: flex; justify-content: center; align-items: center; width: 100%;'><a target='_blank' href='https://beian.miit.gov.cn/'><img src='/foot/foot-icp.svg' style='display: block;'></a></div>
     `
   },
 
@@ -327,11 +329,11 @@ export const websiteConfig = {
         title: "服务器信息",
         icon: "information",
         items: [
-          { label: "服务器类别", value: "云服务器" },
-          { label: "CPU", value: "Ryzen 9 9950X" },
-          { label: "内存", value: "8GB" },  
-          { label: "类型", value: "生存,建筑" },
-          { label: "最大玩家", value: "2026人" },
+          { label: "服务器类别", value: "物理机" },
+          { label: "CPU", value: "i9-13900kf" },
+          { label: "内存", value: "128GB DDR5" },  
+          { label: "类型", value: "生存，生电，建筑" },
+          { label: "最大玩家", value: "100人" },
           { label: "在线时间", value: "7X24小时" }
         ]
       },
@@ -344,8 +346,10 @@ export const websiteConfig = {
         items: [
           { label: "IPV4网络", value: "✓" },
           { label: "IPV6网络", value: "✓" },
+          { label: "镜像服务器", value: "✓" },
           { label: "双重备份", value: "✓" },
-          { label: "群服互通", value: "✓" }
+          { label: "群服互通", value: "✓" },
+          { label: "联机工具提供", value: "✓" }
         ]
       },
       
@@ -355,7 +359,9 @@ export const websiteConfig = {
         title: "管理团队",
         icon: "shield-account",
         items: [
-          { label: "awa7589", value: "腐竹-物理服主！" }
+          { label: "_YUTONG_", value: "腐竹-物理服主！" },
+          { label: "wanwan_jiean", value: "腐竹-技术和主要管理" },
+          { label: "CrazyPastor", value: "腐竹-不务正业" }
         ]
       }
     },
@@ -396,7 +402,7 @@ export const websiteConfig = {
           icon: "qqchat",
           buttonText: "加入 QQ 群",
           buttonType: "secondary",
-          url: "https://qm.qq.com/q/igriSCc6ze"
+          url: "https://qm.qq.com/q/y91E59uOrK"
         },
         {
           title: "邮箱",
@@ -404,7 +410,7 @@ export const websiteConfig = {
           icon: "email",
           buttonText: "发送邮件",
           buttonType: "secondary",
-          url: "2186235192@qq.com"
+          url: "mailto:technologyserver@163.com"
         }
       ]
     },
