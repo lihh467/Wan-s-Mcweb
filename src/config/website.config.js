@@ -201,7 +201,7 @@ export const websiteConfig = {
     apiAddress: "frp-hip.com",
     port: "23047",
     version: "1.21.11",
-    apiEndpoint: "https://api.mcstatus.io/v2/status/bedrock",
+    apiEndpoint: "https://api.mcstatus.io/v2/status/java",
   },
 
   // 页脚配置
