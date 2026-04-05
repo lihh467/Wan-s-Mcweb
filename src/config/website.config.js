@@ -196,11 +196,11 @@ export const websiteConfig = {
   // 服务器配置
   server: {
     // 页面显示的服务器地址
-    displayAddress: "mc.wumingx.top",
+    displayAddress: "frp-hip.com:23047",
     // API请求使用的服务器地址（可以不同）
-    apiAddress: "mc.wumingx.top",
-    port: "31234",
-    version: "基岩版1.21.13×",
+    apiAddress: "frp-hip.com",
+    port: "23047",
+    version: "1.21.11",
     apiEndpoint: "https://api.mcstatus.io/v2/status/bedrock",
   },
 
